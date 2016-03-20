@@ -3,6 +3,8 @@ window.OpenLP = {
         $.getJSON(
                 "/api/service/list",
                 function (data, status) {
+                    console.log(data);
+                    $("#notes").text(data.results.item);
                     OpenLP.updateSlide();
                 }
         );
